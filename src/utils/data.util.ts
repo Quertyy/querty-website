@@ -21,4 +21,4 @@ export const sortPostsByDate = (a: MarkdownInstance<any>, b: MarkdownInstance<an
     return -1;
   }
   return 0;
-} 
+}
