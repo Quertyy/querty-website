@@ -18,5 +18,5 @@ const { project } = Astro.props;
   </p>
   <p class="mb-4">{project.frontmatter.description}</p>
   <Tags tags={project.frontmatter.tags} />
-  <a href={project.url} class="mt-4 inline-block text-blue-500 hover:underline">Know more →</a>
+  <a href={`projects/${project.frontmatter.title}`} class="mt-4 inline-block text-blue-500 hover:underline">Know more →</a>
 </div>
