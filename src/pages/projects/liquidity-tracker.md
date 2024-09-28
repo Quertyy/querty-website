@@ -6,5 +6,3 @@ description: "When I started learning Rust, I made this simple liquidity tracker
 github: "https://github.com/Quertyy/liquidity-trackor/"
 tags: ["rust", "blockchain"]
 ---
-
-Contenu détaillé du projet...

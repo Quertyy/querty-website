@@ -6,5 +6,3 @@ description: "Sniper bot for minting NFT drops on EVM chains. It will automatica
 github: "https://github.com/Quertyy/mint-snipe"
 tags: ["rust", "blockchain"]
 ---
-
-Contenu détaillé du projet...

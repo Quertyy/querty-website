@@ -6,5 +6,3 @@ description: "Completed solutions for the 'Huff Puzzles' challenge series. This 
 github: "https://github.com/Quertyy/huff-puzzles"
 tags: ["HUFF", "EVM"]
 ---
-
-Contenu détaillé du projet...

@@ -6,17 +6,24 @@ interface Props {
 }
 
 const { project } = Astro.props;
+
+const hasDetailedContent = project.rawContent().trim() !== '';
 ---
 
 <div class="project-card mb-8 p-6 bg-stone-200 dark:bg-stone-800 rounded-lg" data-tags={project.frontmatter.tags.join(',')}>
   <h2 class="text-2xl font-bold mb-2">{project.frontmatter.title}</h2>
   <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Build time: {project.frontmatter.buildTime}</p>
-  <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-    {project.frontmatter.github ? (
-      <span>Repo: <a href={project.frontmatter.github} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Link</a></span>
-    ) : 'Repo: Private'}
-  </p>
+  <div class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+    {project.frontmatter.github && (
+      <p>Repo: <a href={project.frontmatter.github} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Link</a></p>
+    )}
+    {project.frontmatter.url && (
+      <p>Website: <a href={project.frontmatter.url} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Visit</a></p>
+    )}
+  </div>
   <p class="mb-4">{project.frontmatter.description}</p>
   <Tags tags={project.frontmatter.tags} />
-  <a href={project.url} class="mt-4 inline-block text-blue-500 hover:underline">Know more →</a>
+  {hasDetailedContent && (
+    <a href={project.url} class="mt-4 inline-block text-blue-500 hover:underline">Know more →</a>
+  )}
 </div>

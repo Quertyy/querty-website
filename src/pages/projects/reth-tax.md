@@ -6,5 +6,3 @@ description: "When learning about Rust and Reth, I decided to add a custom eth_t
 tags: ["Rust", "EVM", "reth", "revm"]
 github: "https://github.com/Quertyy/reth-tax"
 ---
-
-Contenu détaillé du projet...
