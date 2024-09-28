@@ -1,15 +1,16 @@
 ---
 import Section from './Section.astro';
+import { Image } from 'astro:assets';
+import quertyLogo from "../../public/querty.svg"
 ---
 
 <Section>
 	<div class="flex justify-between items-center">
-		<div class="text-3xl font-bold">
-			<a href="/"
-				>💻 <span class="pr-2 text-2xl text-gray-500">{'<'}</span>Querty<span class="text-blue-400"
-					>.</span
-				>rs<span class="pl-2 text-2xl text-gray-500">{'/>'}</span></a
-			>
+		<div class="text-5xl font-bold flex items-center">
+			<a href="/" class="flex items-center">
+				<Image src={quertyLogo} alt="Querty Logo" class="w-20 h-20 mr-2" />
+				<span class="text-blue-400">Querty</span>
+			</a>
 		</div>
 		<div class="flex items-center">
 			<nav class="mr-4">
