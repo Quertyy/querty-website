@@ -20,6 +20,9 @@ const hasDetailedContent = project.rawContent().trim() !== '';
     {project.frontmatter.url && (
       <p>Website: <a href={project.frontmatter.url} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Visit</a></p>
     )}
+    {project.frontmatter.profile && (
+      <p>Profile: <a href={project.frontmatter.profile} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Visit</a></p>
+    )}
   </div>
   <p class="mb-4">{project.frontmatter.description}</p>
   <Tags tags={project.frontmatter.tags} />
