@@ -47,7 +47,7 @@ The project includes comprehensive performance monitoring using Prometheus and G
 
 Here's an example of the Grafana dashboard used to monitor the indexer:
 
-![Grafana Dashboard](./public/projects/indexer.png)
+![Grafana Dashboard](/projects/indexer.png)
 
 ### Challenges and Solutions
 
