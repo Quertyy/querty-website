@@ -1,12 +1,13 @@
 ---
 import Tags from './Tags.astro';
+import { marked } from 'marked';
 
 interface Props {
   project: any;
 }
 
 const { project } = Astro.props;
-
+const parsedDescription = marked.parse(project.frontmatter.description);
 const hasDetailedContent = project.rawContent().trim() !== '';
 ---
 
@@ -27,7 +28,7 @@ const hasDetailedContent = project.rawContent().trim() !== '';
       <p>Profile: <a href={project.frontmatter.profile} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Visit</a></p>
     )}
   </div>
-  <p class="mb-4">{project.frontmatter.description}</p>
+  <div class="dark:prose-invert mb-4 [&_a]:text-blue-500 [&_a]:underline [&_a]:underline-offset-2" set:html={parsedDescription} />
   <Tags tags={project.frontmatter.tags} />
   {hasDetailedContent && (
     <a href={project.url} class="mt-4 inline-block text-blue-500 hover:underline">Know more →</a>
